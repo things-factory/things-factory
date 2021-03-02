@@ -1,2 +1,2 @@
 # things-factory
- things-factory application installation projects
+things-factory applications installation project
