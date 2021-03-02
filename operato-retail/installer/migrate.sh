@@ -1,0 +1,1 @@
+docker exec -it operato-retail npm run migration -- --mode=production

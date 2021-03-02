@@ -1,0 +1,1 @@
+docker exec -it operato-put-to-light npm run migration -- --mode=production

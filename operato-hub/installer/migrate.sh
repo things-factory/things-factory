@@ -1,0 +1,1 @@
+docker exec -it operato-hub npm run migration -- --mode=production

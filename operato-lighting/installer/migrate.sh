@@ -1,0 +1,1 @@
+docker exec -it operato-lighting npm run migration -- --mode=production

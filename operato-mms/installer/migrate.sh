@@ -1,0 +1,1 @@
+docker exec -it operato-mms npm run migration -- --mode=production

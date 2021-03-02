@@ -1,0 +1,33 @@
+server {
+
+    server_name hub.myoperato.com;
+    access_log off;
+
+    location / {
+        proxy_pass http://localhost:4000;
+        proxy_set_header Host $host:$server_port;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_http_version 1.1;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/hub.myoperato.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/hub.myoperato.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+    server_name  hub.myoperato.com;
+
+    listen       80 default_server;
+    listen      [::]:80 default_server;
+
+    return 301 https://$host$request_uri;
+}

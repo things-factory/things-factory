@@ -1,0 +1,1 @@
+docker exec -it operato-fleet npm run migration -- --mode=production
