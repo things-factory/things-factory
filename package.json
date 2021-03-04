@@ -1,0 +1,19 @@
+{
+  "name": "things-factory-install",
+  "version": "1.0.0",
+  "description": "things-factory applications installation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/things-factory/things-factory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/things-factory/things-factory/issues"
+  },
+  "homepage": "https://github.com/things-factory/things-factory#readme"
+}
