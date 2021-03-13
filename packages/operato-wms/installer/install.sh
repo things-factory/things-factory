@@ -40,6 +40,13 @@ else
   curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-wms/installer/docker-compose.yml
 fi
 
+if [ -f "haproxy.cfg" ] ; then
+  echo "haproxy.cfg exist"
+else
+  echo "haproxy.cfg create"
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-wms/installer/haproxy.cfg
+fi
+
 chmod u+x start.sh
 chmod u+x stop.sh
 chmod u+x upgrade.sh
