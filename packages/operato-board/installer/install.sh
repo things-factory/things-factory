@@ -1,3 +1,11 @@
+if [ -f "install.sh" ] ; then
+  echo "install.sh exist"
+else
+  echo "install.sh create"
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board/installer/install.sh
+fi
+
+
 if [ -f "config.production.js" ] ; then
   echo "config.production.js exist"
 else
