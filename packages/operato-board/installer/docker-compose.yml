@@ -31,7 +31,7 @@ services:
     ports:
       - '55432:5432'
   mosquitto:
-    image: eclipse-mosquitto:latest
+    image: eclipse-mosquitto:1.6.12
     ports:
       - 1883:1883
       - 9001:9001
