@@ -13,7 +13,9 @@ services:
     privileged: true
     volumes:
       - ./logs:/app/logs
+      - ./attachments:/app/attachments
       - ./config.production.js:/app/config.production.js
+      - ./license.json:/app/license.json
     ports:
       - 4000:3000
     depends_on:
