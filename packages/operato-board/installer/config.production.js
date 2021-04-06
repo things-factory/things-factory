@@ -1,5 +1,8 @@
+var licenseKey = require('./license').Key
+
 module.exports = {
   subdomain: 'system',
+  licenseKey: licenseKey,
   SECRET: '0xD58F835B69B207A76CA5F84a70a1D0d4C79dAC97', // temporary...
   email: {
     host: 'smtp.office365.com', // your sender-email smtp host
