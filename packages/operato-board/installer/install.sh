@@ -55,6 +55,15 @@ else
   curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board/installer/license.json
 fi
 
+if [ -f "scheduler-config.yaml" ] ; then
+  echo "scheduler-config.yaml exist"
+else
+  echo "scheduler-config.yaml create"
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board/installer/scheduler-config.yaml
+fi
+
+
+
 chmod u+x start.sh
 chmod u+x stop.sh
 chmod u+x upgrade.sh
