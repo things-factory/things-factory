@@ -22,6 +22,8 @@ services:
       - postgres
       - mosquitto
       - scheduler
+    restart: always
+  
   postgres:
     image: postgres:13.2
     container_name: db-operato-board
@@ -44,5 +46,6 @@ services:
     container_name: scheduler
     volumes:
       - ./scheduler-config.yaml:/app/config.yaml
+      - ./evt_queue:/app/evt_queue
     ports:
       - '9902:9902'
