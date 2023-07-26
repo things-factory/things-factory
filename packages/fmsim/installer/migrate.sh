@@ -1,1 +1,1 @@
-docker exec -it operato-board npm run migration -- --mode=production
+docker exec -it fmsim npm run migration -- --mode=production
