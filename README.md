@@ -11,7 +11,7 @@ things-factory applications installation project
 #### Operato Board
 
   ```bash
-  curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board/installer/install.sh | bash -s
+  curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board-new/installer/install.sh | bash -s
   ```
 
 #### Operato ECS
