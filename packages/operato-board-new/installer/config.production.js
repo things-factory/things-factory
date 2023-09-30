@@ -51,7 +51,7 @@ module.exports = {
     username: "postgres",
     password: "abcd1234",
     synchronize: true,
-    logging: true,
+    logging: false,
   },
   scheduler: {
     /* Name to be used for setting client's "application" properties when registering a schedule */

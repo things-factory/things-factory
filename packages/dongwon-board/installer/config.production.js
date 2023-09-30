@@ -1,6 +1,13 @@
+try {
+  var licenseKey = require("./license").Key;
+} catch (e) {
+  var licenseKey = {};
+}
+
 module.exports = {
   subdomain: "system",
-  SECRET: "0xD58F835B69C217A76CA5FA4a70a1D0d4D79dAC64", // temporary...
+  licenseKey: licenseKey,
+  SECRET: "0xD58F835B69B209876CA5F84a70a1D0d4C79dAC97",
   email: {
     host: "smtp.office365.com", // your sender-email smtp host
     port: 587, // smtp server port
@@ -27,6 +34,14 @@ module.exports = {
       level: "silly",
     },
   },
+  //   ormconfig: {
+  //     name: 'default',
+  //     type: 'sqlite',
+  //     database: 'db.sqlite',
+  //     synchronize: false,
+  //     logging: true,
+  //     logger: 'debug'
+  //   },
   ormconfig: {
     name: "default",
     type: "postgres",
@@ -40,7 +55,7 @@ module.exports = {
   },
   scheduler: {
     /* Name to be used for setting client's "application" properties when registering a schedule */
-    application: "operato-ecs",
+    application: "operato-board",
     /* Base endpoint to be used for setting "callback" properties when registering a schedule */
     callbackBase: "http://app:3000",
     /* 

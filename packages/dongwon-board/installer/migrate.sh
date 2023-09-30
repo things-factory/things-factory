@@ -1,0 +1,1 @@
+docker exec -it dongwon-board npm run migration -- --mode=production
