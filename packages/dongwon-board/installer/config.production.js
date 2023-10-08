@@ -34,14 +34,6 @@ module.exports = {
       level: "silly",
     },
   },
-  //   ormconfig: {
-  //     name: 'default',
-  //     type: 'sqlite',
-  //     database: 'db.sqlite',
-  //     synchronize: false,
-  //     logging: true,
-  //     logger: 'debug'
-  //   },
   ormconfig: {
     name: "default",
     type: "postgres",

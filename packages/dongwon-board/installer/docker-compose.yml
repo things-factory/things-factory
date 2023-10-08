@@ -7,9 +7,8 @@ services:
     depends_on:
       - app
   app:
-    build: .
     container_name: dongwon-board
-    image: hatiolab/dongwon-board:1.0.1
+    image: hatiolab/dongwon-board:latest
     privileged: true
     volumes:
       - ./logs:/app/logs

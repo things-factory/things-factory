@@ -7,7 +7,6 @@ services:
     depends_on:
       - app
   app:
-    build: .
     container_name: operato-board
     image: hatiolab/operato-board:latest
     privileged: true
