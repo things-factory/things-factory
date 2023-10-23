@@ -19,3 +19,9 @@ things-factory applications installation project
   ```bash
   curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-ecs/installer/install.sh | bash -s
   ```
+
+#### Paranhae ECS
+
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/paranhae-ecs/installer/install.sh | bash -s
+  ```
