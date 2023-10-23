@@ -1,0 +1,1 @@
+docker exec -it paranhae-ecs npm run migration -- --mode=production

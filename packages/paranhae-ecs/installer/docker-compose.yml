@@ -7,8 +7,8 @@ services:
     depends_on:
       - app
   app:
-    container_name: operato-ecs
-    image: hatiolab/operato-ecs:latest
+    container_name: paranhae-ecs
+    image: hatiolab/paranhae-ecs:latest
     privileged: true
     volumes:
       - ./logs:/app/logs
@@ -21,7 +21,7 @@ services:
       - scheduler
   postgres:
     image: postgres:13.2
-    container_name: db-operato-ecs
+    container_name: db-paranhae-ecs
     environment:
       POSTGRES_PASSWORD: abcd1234
       POSTGRES_USER: postgres
