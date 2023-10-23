@@ -1,6 +1,6 @@
 module.exports = {
   subdomain: "system",
-  SECRET: "0xD58F835B69C317A76CA5FA4a70a1D0d4D79dAC64", // temporary...
+  SECRET: "0xD58F835B69C317A76CA5FA4A70A1D0d4D79dAC64", // temporary...
   email: {
     host: "smtp.office365.com", // your sender-email smtp host
     port: 587, // smtp server port

@@ -35,7 +35,6 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
-
   scheduler:
     image: hatiolab/scheduler:latest
     container_name: scheduler
