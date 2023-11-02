@@ -1,0 +1,16 @@
+---
+database:
+  host: postgres
+  port: 5432
+  id: postgres
+  pw: abcd1234
+  db: postgres
+
+scheduler:
+  debug: false
+  fetch_interval: 0.5
+  fetch_count: 1
+  database: schedule_queue
+
+history:
+  database: schedule_history

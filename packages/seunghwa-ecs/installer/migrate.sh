@@ -1,0 +1,1 @@
+docker exec -it seunghwa-ecs npm run migration -- --mode=production
