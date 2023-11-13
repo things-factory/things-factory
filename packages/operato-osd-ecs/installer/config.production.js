@@ -68,7 +68,7 @@ module.exports = {
   },
   scheduler: {
     /* Name to be used for setting client's "application" properties when registering a schedule */
-    application: "osdecs",
+    application: "operato-osd-ecs",
     /* Base endpoint to be used for setting "callback" properties when registering a schedule */
     callbackBase: "http://app:3000",
     /* 
