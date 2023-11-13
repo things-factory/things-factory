@@ -6,8 +6,29 @@ try {
 
 module.exports = {
   subdomain: "system",
-  SECRET: "0xD58F835B69C317A76CA5FA4A70A1D0d4D79dAC64", // temporary...
+  SECRET: "0xD58F835B69D207123546784a70a1D0d4C79dAC95",
+  accessTokenCookieKey: "access_token.osdecs",
   licenseKey: licenseKey,
+  publicHomeRoute: "/auth/signin",
+  password: {
+    lowerCase: true,
+    upperCase: false,
+    digit: true,
+    specialCharacter: true,
+    allowRepeat: true,
+    useTightPattern: true,
+    useLoosePattern: false,
+    tightCharacterLength: 8,
+    looseCharacterLength: 15,
+    history: 2,
+    defaultPassword: "osdecs1!",
+  },
+  /* 
+    Only When 'disableUserSignupProcess' is set to false,
+    a user-initiated user registration process is provided. 
+    When this value is true, the 'defaultPassword' for the password must be configured.
+  */
+  disableUserSignupProcess: true,
   email: {
     host: "smtp.office365.com", // your sender-email smtp host
     port: 587, // smtp server port
@@ -47,7 +68,7 @@ module.exports = {
   },
   scheduler: {
     /* Name to be used for setting client's "application" properties when registering a schedule */
-    application: "operato-osd-ecs",
+    application: "osdecs",
     /* Base endpoint to be used for setting "callback" properties when registering a schedule */
     callbackBase: "http://app:3000",
     /* 
@@ -56,13 +77,5 @@ module.exports = {
         https://github.com/node-fetch/node-fetch/issues/1624
       */
     endpoint: "http://scheduler:9902",
-  },
-  metalDetector: {
-    mddh: {
-      port: 9801,
-    },
-    depos: {
-      port: 9802,
-    },
   },
 };
