@@ -31,3 +31,9 @@ things-factory applications installation project
   ```bash
   curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/seunghwa-ecs/installer/install.sh | bash -s
   ```
+
+#### Operato OSD ECS
+
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-osd-ecs/installer/install.sh | bash -s
+  ```
