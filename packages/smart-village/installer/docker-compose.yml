@@ -1,0 +1,40 @@
+version: "3"
+services:
+  nginx:
+    image: hatiolab/operato-nginx:latest
+    ports:
+      - ${HostPort}:80
+    depends_on:
+      - app
+  app:
+    container_name: smart-village
+    image: hatiolab/smart-village:latest
+    privileged: true
+    volumes:
+      - ./logs:/app/logs
+      - ./attachments:/app/attachments
+      - ./config.production.js:/app/config.production.js
+      - ./tsconfig-base.json:/tsconfig-base.json
+    ports:
+      - 4000:3000
+    depends_on:
+      - postgres
+      - scheduler
+  postgres:
+    image: postgres:13.2
+    container_name: db-smart-village
+    environment:
+      POSTGRES_PASSWORD: abcd1234
+      POSTGRES_USER: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/pgdata
+    ports:
+      - "55432:5432"
+  scheduler:
+    image: hatiolab/scheduler:latest
+    container_name: scheduler
+    volumes:
+      - ./scheduler-config.yaml:/app/config.yaml
+    ports:
+      - "9902:9902"

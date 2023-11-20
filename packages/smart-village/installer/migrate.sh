@@ -1,0 +1,1 @@
+docker exec -it smart-village npm run migration -- --mode=production
