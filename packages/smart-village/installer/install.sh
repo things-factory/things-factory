@@ -51,7 +51,7 @@ if [ -f "tsconfig-base.json" ] ; then
   echo "tsconfig-base.json exist"
 else
   echo "tsconfig-base.json create"
-  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/smart-village/installer/tsconfig-base.json.yaml
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/smart-village/installer/tsconfig-base.json
 fi
 
 chmod u+x start.sh
