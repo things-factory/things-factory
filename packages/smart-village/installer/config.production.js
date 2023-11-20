@@ -59,6 +59,20 @@ module.exports = {
       ciphers: "SSLv3",
     },
   },
+  storage: {
+    type: "database",
+  },
+  ormconfig: {
+    name: "default",
+    type: "postgres",
+    host: "postgres",
+    port: 5432,
+    database: "postgres",
+    username: "postgres",
+    password: "abcd1234",
+    synchronize: true,
+    logging: false,
+  },
   logger: {
     file: {
       filename: "logs/application-%DATE%.log",
@@ -71,16 +85,5 @@ module.exports = {
     console: {
       level: "silly",
     },
-  },
-  ormconfig: {
-    name: "default",
-    type: "postgres",
-    host: "postgres",
-    port: 5432,
-    database: "postgres",
-    username: "postgres",
-    password: "abcd1234",
-    synchronize: true,
-    logging: false,
   },
 };

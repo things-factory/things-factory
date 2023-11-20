@@ -12,16 +12,16 @@ services:
     privileged: true
     volumes:
       - ./logs:/app/logs
-      - ./attachments:/app/attachments
       - ./config.production.js:/app/config.production.js
       - ./tsconfig-base.json:/tsconfig-base.json
     ports:
       - 4000:3000
     depends_on:
       - postgres
+      - mosquitto
       - scheduler
   postgres:
-    image: postgres:13.2
+    image: postgis/postgis:13-3.4
     container_name: db-smart-village
     environment:
       POSTGRES_PASSWORD: abcd1234
@@ -31,6 +31,11 @@ services:
       - ./postgres_data:/var/lib/postgresql/data/pgdata
     ports:
       - "55432:5432"
+  mosquitto:
+    image: eclipse-mosquitto:1.6.12
+    ports:
+      - 1883:1883
+      - 9001:9001
   scheduler:
     image: hatiolab/scheduler:latest
     container_name: scheduler
