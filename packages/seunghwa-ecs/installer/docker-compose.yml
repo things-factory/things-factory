@@ -13,6 +13,7 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./config.production.js:/app/config.production.js
+      - ./license.json:/app/license.json
     ports:
       - 4000:3000
     depends_on:

@@ -1,7 +1,14 @@
+try {
+  var licenseKey = require("./license").Key;
+} catch (e) {
+  var licenseKey = {};
+}
+
 module.exports = {
   subdomain: "system",
   publicHomeRoute: "/public/home",
   applianceJwtExpiresIn: "10y",
+  licenseKey: licenseKey,
   /* database field encryption key : 32 bytes - must be changed by every installation */
   dataEncryptionKey: "V6g5oHJZb7KcazIyL6cM95XvIDouon5b",
   password: {
