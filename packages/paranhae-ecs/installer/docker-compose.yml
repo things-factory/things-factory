@@ -20,6 +20,7 @@ services:
       - postgres
       - mosquitto
       - scheduler
+    restart: always
   postgres:
     image: postgres:13.2
     container_name: db-paranhae-ecs
