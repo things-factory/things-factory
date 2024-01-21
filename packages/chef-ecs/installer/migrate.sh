@@ -1,0 +1,1 @@
+docker exec -it chef-ecs npm run migration -- --mode=production
