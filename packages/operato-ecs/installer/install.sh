@@ -44,7 +44,7 @@ if [ -f "scheduler-config.yaml" ] ; then
   echo "scheduler-config.yaml exist"
 else
   echo "scheduler-config.yaml create"
-  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-board/installer/scheduler-config.yaml
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-ecs/installer/scheduler-config.yaml
 fi
 
 chmod u+x start.sh
