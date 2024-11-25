@@ -47,6 +47,13 @@ else
   curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-ecs/installer/scheduler-config.yaml
 fi
 
+if [ -f "tsconfig-base.json" ] ; then
+  echo "tsconfig-base.json exist"
+else
+  echo "tsconfig-base.json create"
+  curl -O https://raw.githubusercontent.com/things-factory/things-factory/master/packages/operato-ecs/installer/tsconfig-base.json
+fi
+
 chmod u+x start.sh
 chmod u+x stop.sh
 chmod u+x upgrade.sh
